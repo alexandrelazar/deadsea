@@ -1,0 +1,11 @@
+<div class="carousel slide carousel-fade" data-ride="carousel" data-interval="7500">
+<?php foreach($brands as $brand) : ?>			
+	<div class="carousel-item <?php if($brand->id == 1): ?> <?= $this->escapeHtml('active')?> <?php endif;?>">
+		<img class="d-block w-100" src="<?= $this->basePath() . '/img/' . $brand->routename . '.jpg'?>" alt="<?= $this->escapeHtml($brand->name) ?>">
+		<div class="carousel-caption-custom">
+			<h2><?= $this->escapeHtml($brand->name)?></h2>
+			<h3><?= $this->escapeHtml($brand->title)?></h3>
+			<a class="btn btn-info" href="<?= $this->url('brand', ['name' => $brand->routename])?>">Learn More</a>
+		</div>
+	</div>
+<?php endforeach; ?>

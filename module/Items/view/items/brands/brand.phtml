@@ -1,0 +1,7 @@
+<div class="container">	
+	<hr>
+	<h1><?= $this->escapeHtml($brand->name)?></h1>
+	<img class="img-fluid lable" src="<?= $this->basePath('/img/' . $brand->routename . '.jpg')?>" alt="<?= $this->escapeHtml($brand->name)?>">
+	<hr>
+	<h3 class="description"><?= $this->escapeHtml($brand->description)?></h3>
+</div>
